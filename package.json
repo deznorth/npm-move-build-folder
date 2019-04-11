@@ -1,0 +1,17 @@
+{
+  "name": "npm-move-folder-on-run",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "cd .\\client && move .\\build ..\\",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node app.js",
+    "start:dev": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
