@@ -3,6 +3,21 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    message: 'not loaded'
+  }
+
+  componentDidMount(){
+    fetch('/api/secret')
+    .then(res => res.json())
+    .then(data => {
+      this.setState({
+        message: data
+      });
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,6 +34,7 @@ class App extends Component {
           >
             Learn React
           </a>
+          <p>{this.state.message}</p>
         </header>
       </div>
     );
