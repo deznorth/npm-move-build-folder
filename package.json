@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": " node ./server/index.js",
     "start:dev": "nodemon ./server/index.js",
-    "heroku-postbuild":"cd ./client && npm run build && mv -f ./build ../"
+    "heroku-postbuild":"cd ./client && npm install && npm run build && mv -f ./build ../"
   },
   "author": "",
   "license": "ISC",
