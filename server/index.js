@@ -3,8 +3,8 @@ const app = module.exports = express();
 const morgan = require('morgan');
 const path = require('path');
 
-const config = require('./config/config');
-const PORT = config.PORT;
+const dev = process.env.NODE_ENV !== 'production';
+const PORT = dev ? 5000 : process.env.PORT;
 
 const apiRoutes = require('./routes/api');
 
